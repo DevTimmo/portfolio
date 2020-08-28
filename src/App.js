@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Navigation from './components/navigation/Navigation.jsx';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    
+      <Router>
+        <Navigation />
+        {/* <Switch>
+          <Route exact path ="/" component={} />
+          <Route path="/home" component={} /> 
+          <Route path="/playerzone" component={HeaderImage} />
+          <Route path="/sportspress" component={SportsPress} />
+          <Route path="/media" component={Media} />
+          <Route path="/registration" component={Registration} />
+          <Route path="/contact" component={Contact} />
+        </Switch> */}
+      </Router>
+    
   );
 }
 
 export default App;
+
+
+//https://www.freecodecamp.org/news/a-guide-to-upgrading-to-react-router-4/
